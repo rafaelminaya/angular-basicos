@@ -1,0 +1,23 @@
+<p>Listado de Héroes</p>
+<!-- noBorrado : Es una referencia local. 
+    - La referencia local es un identificador usado en el template/vista
+    - No es visible para el componente TS.
+    - Lo que hacemos es mostrar "noBorrado" en caso no esté asignado el "heroeBorrado"
+ -->
+<div *ngIf="heroeBorrado; else noBorrado">
+    <h3>Héroe borrado: <small> {{heroeBorrado}} </small></h3>
+</div>
+
+<!-- ng-template :
+   - Componente propio de angular que no tiene una contaparte del lado del html
+   - El contenido se renderiza basado en una condición, en este caso de "noBorrado"
+ -->
+<ng-template #noBorrado>
+    <h3>No ha borrado nada</h3>
+</ng-template>
+
+<button (click)="borrarheroe()">Borrar</button>
+
+<ul>
+    <li *ngFor="let heroe of heroes; let i = index"> {{i}} - {{heroe}} </li>
+</ul>

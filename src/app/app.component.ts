@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
+// @Component : Es un corador "@component"
+// Las propiedades del decorador son selector, templateUrl, styleUrls
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  // template: ` <h1>Hola de nuevo</h1> `,
 })
-export class AppComponent {
-  title = 'bases';
-}
+export class AppComponent {}
