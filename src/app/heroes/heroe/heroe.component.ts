@@ -7,7 +7,7 @@ export class HeroeComponent {
   nombre: string = 'Ironman';
   edad: number = 45;
 
-  // get : El get es prácticamente tratada como una propiedad, pero que al ser invocada realizada su implementación.
+  // get : El get e1 prácticamente tratada como una propiedad, pero que al ser invocada realiza su implementación.
   // getters
   get nombreCapitalizado(): string {
     return this.nombre.toUpperCase();

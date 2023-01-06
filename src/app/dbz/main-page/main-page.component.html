@@ -1,0 +1,21 @@
+<h1>Dragon Ball Z</h1>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <!-- 
+            [personajes] : Atributo del hijo.
+            "personajes" : Atributo del padre.
+         -->
+        <app-personajes></app-personajes>
+    </div>
+
+    <!--  
+        (onNuevoPersonje) : Evento emitido por el componente hijo "AgregarComponent" 
+        "agregarNuevopersonaje()" : Método  del padre que se invocará cuando se dispare el evento emitido "(onNuevoPersonje)"
+    -->
+    <div class="col">
+        <!-- <app-agregar [nuevo]="nuevo" (onNuevoPersonje)="agregarNuevopersonaje($event)"></app-agregar> -->
+        <app-agregar [nuevo]="nuevo"></app-agregar>
+    </div>
+</div>

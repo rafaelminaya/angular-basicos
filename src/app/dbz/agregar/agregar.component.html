@@ -1,0 +1,22 @@
+<h3>Agregar <small> {{nuevo.nombre}} </small> </h3>
+<hr>
+<!-- Agregamos el evento (submit) al formulario en vez que un evento (click) a un botón. 
+            agregar() : Será el método que procesará el evento submit del formulario.
+
+            $event : Permite obtener el evento que se está disparando disparado. 
+            Esto se puede aplicar para cualquier otra propiedad de angular como (click).
+        -->
+<!-- <form (submit)="agregar($event)"> -->
+<form (ngSubmit)="agregar()">
+
+    <!-- [value] : Permite enlazar con una variable en el componente TS. Esto de forma "One way data binding" -->
+
+    <!-- <input type="text" placeholder="Nombre" [value]="nuevo.nombre" (input)="cambiarNombre($event)" /> -->
+    <!-- [(ngModel)] : Two way data binding -->
+    <input type="text" placeholder="Nombre" [value]="nuevo.nombre" name="nombre" [(ngModel)]="nuevo.nombre" />
+
+    <input type="number" placeholder="Poder" [value]="nuevo.poder" name="poder" [(ngModel)]="nuevo.poder" />
+
+    <button type="submit">Agregar</button>
+
+</form>
